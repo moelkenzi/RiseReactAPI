@@ -6,12 +6,9 @@ const ProductPage = () => {
   const [data, setData] = useState([]);
 
   const getProducts = async () => {
-    try {
       const response = await axios.get("https://fakestoreapi.com/products/");
       setData(response.data);
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    }
+
   };
 
   useEffect(() => {
